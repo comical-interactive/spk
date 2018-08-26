@@ -1,0 +1,25 @@
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'paper-dashboard';
+
+[v-cloak] > * {
+    display: none;
+}
+
+.table-responsive {
+    overflow: auto !important;
+}
+
+.h-500 {
+    min-height: 500px !important;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.content > .form.form-import:not(last-child) {
+    margin-bottom: 7rem;
+}
