@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class MbtiEppsLs extends Model
 {
-    protected $guarded = [];
+    protected $guarded = ['test_date'];
 
     /**
      * The accessors to append to the model's array form.

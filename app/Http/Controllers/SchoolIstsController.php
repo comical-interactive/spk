@@ -33,9 +33,13 @@ class SchoolIstsController extends Controller
     {
         $request->validate(['file' => 'required|file']);
 
-        $ists = (new IstParser($request->file))->parse();
+        if ($school->ists_count > 0) {
+            $school->ists()->delete();
+        }
 
-        if ($school->ists()->createMany($ists->toArray())) {
+        $attributes = (new IstParser($request->file, 3))->parse()->toArray();
+
+        if ($school->importTest('ists', $attributes)) {
             return redirect()->back()->with('flash', 'Data Berhasil diimport');
         }
 

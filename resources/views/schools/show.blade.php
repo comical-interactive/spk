@@ -53,16 +53,17 @@ Direktori {{ $school->name }}
 
                     <h4>Impor Data IST</h4>
 
-                    @if ( ! $school->ists_count > 0)
-                        <div class="form-inline">
-                            <div class="form-group">
-                                <input type="file" class="form-control border-input" name="file">
-                            </div>
-
-                            <button class="btn btn-primary btn-fill">Upload</button>
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <input type="file" class="form-control border-input" name="file">
                         </div>
-                    @else
-                        <p class="lead text-success"><i class="ti-check"></i> Data IST Telah diimpor</p>
+
+                        <button class="btn btn-primary btn-fill">Upload</button>
+                    </div>
+
+                    @if ($school->ists_count > 0)
+                        <p class="text-success">Data IST telah diimpor, mengupload data baru akan menghapus data yang
+                        lama</p>
                     @endif
                 </form>
 
@@ -76,16 +77,17 @@ Direktori {{ $school->name }}
 
                     <h4>Impor Data RMIB</h4>
 
-                    @if ( ! $school->rmibs_count > 0)
-                        <div class="form-inline">
-                            <div class="form-group">
-                                <input type="file" class="form-control border-input" name="file">
-                            </div>
-
-                            <button class="btn btn-primary btn-fill">Upload</button>
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <input type="file" class="form-control border-input" name="file">
                         </div>
-                    @else
-                        <p class="lead text-success"><i class="ti-check"></i> Data RMIB Telah diimpor</p>
+
+                        <button class="btn btn-primary btn-fill">Upload</button>
+                    </div>
+
+                    @if ($school->rmibs_count > 0)
+                        <p class="text-success">Data RMIB telah diimpor, mengupload data baru akan menghapus data yang
+                        lama</p>
                     @endif
                 </form>
 
@@ -99,16 +101,17 @@ Direktori {{ $school->name }}
 
                     <h4>Impor Data MBTI EPPS LS</h4>
 
-                    @if ( ! $school->mbti_epps_lss_count > 0)
-                        <div class="form-inline">
-                            <div class="form-group">
-                                <input type="file" class="form-control border-input" name="file">
-                            </div>
-
-                            <button class="btn btn-primary btn-fill">Upload</button>
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <input type="file" class="form-control border-input" name="file">
                         </div>
-                    @else
-                        <p class="lead text-success"><i class="ti-check"></i> Data MBTI EPPS LS Telah diimpor</p>
+
+                        <button class="btn btn-primary btn-fill">Upload</button>
+                    </div>
+
+                    @if ($school->mbti_epps_lss_count > 0)
+                        <p class="text-success">Data MBTI EPPS LS telah diimpor, mengupload data baru akan menghapus
+                        data yang lama</p>
                     @endif
                 </form>
             </div>

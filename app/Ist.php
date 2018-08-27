@@ -9,7 +9,7 @@ class Ist extends Model
 {
     use IstAbilities;
 
-    protected $guarded = [];
+    protected $guarded = ['test_date'];
 
     public function getTestTakerAgeAttribute($value)
     {

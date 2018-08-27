@@ -30,9 +30,13 @@ class SchoolMbtiEppsLssController extends Controller
     {
         $request->validate(['file' => 'required|file']);
 
-        $mbtiEppsLss = (new MbtiEppsLsParser($request->file))->parse();
+        if ($school->mbti_epps_lss_count > 0) {
+            $school->mbtiEppsLss()->delete();
+        }
 
-        if ($school->mbtiEppsLss()->createMany($mbtiEppsLss->toArray())) {
+        $attributes = (new MbtiEppsLsParser($request->file))->parse()->toArray();
+
+        if ($school->importTest('mbtiEppsLss', $attributes)) {
             return redirect()->back()->with('flash', 'Data Berhasil diimport');
         }
 

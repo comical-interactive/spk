@@ -31,9 +31,13 @@ class SchoolRmibsController extends Controller
     {
         $request->validate(['file' => 'required|file']);
 
-        $rmibs = (new RmibParser($request->file))->parse();
+        if ($school->rmibs_count > 0) {
+            $school->rmibs()->delete();
+        }
 
-        if ($school->rmibs()->createMany($rmibs->toArray())) {
+        $attributes = (new RmibParser($request->file))->parse()->toArray();
+
+        if ($school->importTest('rmibs', $attributes)) {
             return redirect()->back()->with('flash', 'Data Berhasil diimport');
         }
 

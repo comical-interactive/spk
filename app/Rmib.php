@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Rmib extends Model
 {
-    protected $guarded = [];
+    protected $guarded = ['test_date'];
 
     public function getSumsAttribute()
     {

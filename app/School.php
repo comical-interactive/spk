@@ -41,6 +41,13 @@ class School extends Model
         return $this->hasMany(MbtiEppsLs::class);
     }
 
+    public function importTest($test, $attributes)
+    {
+        $relation = call_user_func([$this, $test]);
+
+        return $relation->createMany($attributes);
+    }
+
     public function reset()
     {
         $this->ists()->delete();

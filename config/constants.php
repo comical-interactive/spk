@@ -3,6 +3,24 @@
 return [
     'ist' => [
         'question_types' => ['se', 'wa', 'an', 'ge', 'ra', 'zr', 'fa', 'wu', 'me'],
+        'columns' => [
+            'test_taker_index',
+            'test_taker_number',
+            'test_taker_name',
+            'test_taker_first_choice',
+            'test_taker_second_choice',
+            'test_taker_age',
+            'test_taker_sex',
+            'se_answers',
+            'wa_answers',
+            'an_answers',
+            'ge_answers',
+            'ra_answers',
+            'zr_answers',
+            'fa_answers',
+            'wu_answers',
+            'me_answers',
+        ],
         'answers' => [
             'se' => ['E', 'C', 'D', 'D', 'D', 'B', 'C', 'A', 'E', 'B', 'C', 'D', 'D', 'E', 'C', 'A', 'B', 'B', 'C', 'B'],
             'wa' => ['B', 'B', 'D', 'C', 'C', 'C', 'C', 'D', 'D', 'A', 'E', 'A', 'A', 'B', 'C', 'A', 'D', 'E', 'B', 'C'],
@@ -14,8 +32,6 @@ return [
             'me' => ['D', 'E', 'B', 'A', 'C', 'A', 'D', 'E', 'C', 'B', 'B', 'A', 'E', 'C', 'D', 'B', 'E', 'A', 'C', 'D'],
         ],
         'ge_scores' => [1, 1, 2, 3, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 17, 18, 19, 20, 20],
-    ],
-    'rmib' => [
         'standard_ref' => [
             14 => [
                 'se' => [71,75,79,83,86,90,94,97,101,105,109,112,116,120,123,127,131,134,134,134,134],
@@ -53,6 +69,39 @@ return [
                 'wu' => [72,75,78,81,84,87,90,93,97,100,103,106,109,112,115,118,122,125,128,131,134],
                 'total' => ['start' => 63, 'step' => 5, 'range' => 10]
             ],
+        ],
+    ],
+    'rmib' => [
+        'columns' => [
+            'test_taker_index',
+            'test_taker_number',
+            'test_taker_name',
+            'test_date',
+            'test_taker_sex',
+            'test_taker_age',
+            'a_answers',
+            'b_answers',
+            'c_answers',
+            'd_answers',
+            'e_answers',
+            'f_answers',
+            'g_answers',
+            'h_answers',
+        ],
+    ],
+    'mels' => [
+        'columns' => [
+            'test_taker_index',
+            'test_taker_number',
+            'test_taker_name',
+            'test_date',
+            'test_taker_age',
+            'test_taker_sex',
+            'mbti1_answers',
+            'mbti2_answers',
+            'epps1_answers',
+            'epps2_answers',
+            'ls_answers',
         ],
     ],
     'epps' => [
