@@ -1,29 +1,29 @@
 <td class="svg">
-    @if ($ability->grade() == 'SK')
+    @if ($grade == 'SK')
       <img src="{{ asset('check-mark.svg') }}">
     @endif
   </td>
 
   <td class="svg">
-    @if ($ability->grade() == 'K')
+    @if ($grade == 'K')
       <img src="{{ asset('check-mark.svg') }}">
     @endif
   </td>
 
   <td class="svg">
-    @if ($ability->grade() == 'S')
+    @if ($grade == 'S')
       <img src="{{ asset('check-mark.svg') }}">
     @endif
   </td>
 
   <td class="svg">
-    @if ($ability->grade() == 'B')
+    @if ($grade == 'B')
       <img src="{{ asset('check-mark.svg') }}">
     @endif
   </td>
 
   <td class="svg">
-    @if ($ability->grade() == 'SB')
+    @if ($grade == 'SB')
       <img src="{{ asset('check-mark.svg') }}">
     @endif
   </td>

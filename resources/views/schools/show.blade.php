@@ -89,6 +89,28 @@ Direktori {{ $school->name }}
                     @endif
                 </form>
 
+                <form
+                    class="form form-import"
+                    action="{{ route('school-mels.import', compact('school')) }}"
+                    method="POST"
+                    enctype="multipart/form-data"
+                >
+                    @csrf
+
+                    <h4>Impor Data MBTI EPPS LS</h4>
+
+                    @if ( ! $school->mbti_epps_lss_count > 0)
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <input type="file" class="form-control border-input" name="file">
+                            </div>
+
+                            <button class="btn btn-primary btn-fill">Upload</button>
+                        </div>
+                    @else
+                        <p class="lead text-success"><i class="ti-check"></i> Data MBTI EPPS LS Telah diimpor</p>
+                    @endif
+                </form>
             </div>
         </div>
     </div>

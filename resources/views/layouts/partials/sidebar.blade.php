@@ -20,5 +20,12 @@
           <p>RMIB</p>
         </a>
       </li>
+
+      <li :class="setActive('mbti-epps-ls')">
+        <a href="{{ route('school-mels.index') }}">
+          <i class="ti-agenda"></i>
+          <p>MBTI EPPS LS</p>
+        </a>
+      </li>
     <ul>
   </sidebar>

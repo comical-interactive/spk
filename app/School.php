@@ -10,7 +10,8 @@ class School extends Model
 
     protected $withCount = [
         'ists',
-        'rmibs'
+        'rmibs',
+        'mbtiEppsLss'
     ];
 
     /**
@@ -35,9 +36,15 @@ class School extends Model
         return $this->hasMany(Rmib::class);
     }
 
+    public function mbtiEppsLss()
+    {
+        return $this->hasMany(MbtiEppsLs::class);
+    }
+
     public function reset()
     {
         $this->ists()->delete();
         $this->rmibs()->delete();
+        $this->mbtiEppsLss()->delete();
     }
 }
