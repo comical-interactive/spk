@@ -30,11 +30,19 @@
         }
 
         h3 {
-            margin-top: 3rem !important
+            margin-top: 3rem !important;
+            background-color: lightgrey;
+            padding: 20px;
         }
 
         div > h4 {
             color: maroon
+        }
+
+        img {
+            width: 300px;
+            margin-top: 10px;
+            border: 1px solid maroon
         }
     </style>
 </head>
@@ -44,6 +52,10 @@
             <h2 class="text-center">GAYA BELAJAR</h2>
 
             @include("pdfs.partials.ls-{$model->ls}")
+
+            <center>
+                <img src="{{ asset('img/ls.jpg') }}">
+            </center>
 
             @if (! $loop->last)
                 <div class="page-break"></div>
