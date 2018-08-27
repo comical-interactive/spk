@@ -121,7 +121,7 @@
         <table class="table table-bordered" style="background: aliceblue; font-size: 1.25rem; font-weight: 800">
           <tr>
             <td style="text-align: center">IQ</td>
-            <td>{{ $ist->iq->score() }} ({{ $ist->iq->criteria() }}, menurut IST)</td>
+            <td>{{ $ist->iq->score() }} ({{ $ist->iq->gradeInWord() }}, menurut IST)</td>
           </tr>
         </table>
       </div>

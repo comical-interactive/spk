@@ -112,7 +112,7 @@ Intelligenz Struktur Test
                     <td>{{ $ist->standardized_score->me }}</td>
                     <td>{{ $ist->standardized_score->total }}</td>
                     <td>{{ $ist->iq->score() }}</td>
-                    <td>{{ $ist->iq->criteria() }}</td>
+                    <td>{{ $ist->iq->gradeInWord() }}</td>
                     <td>{{ $ist->iq->grade() }}</td>
                     <td class="text-right">{{ $ist->verbalAbility()->score() }}</td>
                     <td class="text-center">{{ $ist->verbalAbility()->grade() }}</td>
@@ -130,8 +130,8 @@ Intelligenz Struktur Test
                     <td class="text-center">{{ $ist->memoryAbility()->grade() }}</td>
                     <td class="text-right">{{ $ist->problemSolvingAbility()->score() }}</td>
                     <td class="text-center">{{ $ist->problemSolvingAbility()->grade() }}</td>
-                    <td>{{ $ist->first_choice_recommendation }}</td>
-                    <td>{{ $ist->second_choice_recommendation }}</td>
+                    <td>{{ $ist->recommendation->first() }}</td>
+                    <td>{{ $ist->recommendation->second() }}</td>
                   </tr>
                 @endforeach
               </tbody>

@@ -5,5 +5,5 @@ Myers–Briggs Type Indicator, Edward Personal Preference Schedule, Learning Sty
 @endsection
 
 @section('content')
-  @include('layouts.partials.download-list', ['title' => 'Laporan LS', 'routeName' => 'school-ls.download'])
+  @include('layouts.partials.download-list', ['title' => 'Laporan LS', 'routeName' => 'school-lss.download'])
 @endsection

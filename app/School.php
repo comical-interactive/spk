@@ -43,6 +43,10 @@ class School extends Model
 
     public function importTest($test, $attributes)
     {
+        if (! method_exists($this, $test)) {
+            throw new \Exception("{$test} does not exists!");
+        }
+
         $relation = call_user_func([$this, $test]);
 
         return $relation->createMany($attributes);

@@ -20,7 +20,7 @@ class IstParserTest extends TestCase
     /** @test */
     public function it_parses_the_line_correctly()
     {
-        $stringToParse = collect(makeIst());
+        $stringToParse = collect(istInput());
         $result = $this->parser->parseLine($stringToParse);
 
         $this->assertEquals([

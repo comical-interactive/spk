@@ -30,8 +30,8 @@
           <td>{{ $ist->test_taker_name }}</td>
           <td>{{ $ist->test_taker_number }}</td>
           <td>{{ $ist->iq->score() }}</td>
-          <td>{{ $ist->first_choice_recommendation }}</td>
-          <td>{{ $ist->second_choice_recommendation }}</td>
+          <td>{{ $ist->recommendation->first() }}</td>
+          <td>{{ $ist->recommendation->second() }}</td>
         </tr>
       @endforeach
 

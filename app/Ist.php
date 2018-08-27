@@ -11,6 +11,15 @@ class Ist extends Model
 
     protected $guarded = ['test_date'];
 
+    /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array
+     */
+    protected $appends = [
+        'raw_score', 'standardized_score', 'iq', 'recommendation'
+    ];
+
     public function getTestTakerAgeAttribute($value)
     {
         if ($value == 0) {
@@ -39,36 +48,8 @@ class Ist extends Model
         return new Iq($this->standardized_score->total);
     }
 
-    public function getFirstChoiceRecommendationAttribute()
+    public function getRecommendationAttribute()
     {
-        if ($this->iq->score() >= 80) {
-            if ($this->firstChoiceIsEmpty() || $this->test_taker_first_choice == 'IPA') {
-                return 'MIA';
-            }
-
-            if ($this->test_taker_first_choice == 'IPS') {
-                return 'IIS';
-            }
-
-            return $this->test_taker_first_choice;
-        }
-
-        return 'IIS';
-    }
-
-    public function getSecondChoiceRecommendationAttribute()
-    {
-        if ($this->test_taker_first_choice == 'IPS' || $this->first_choice_recommendation == 'IIS') {
-            return 'IBB';
-        }
-
-        return 'IIS';
-    }
-
-    protected function firstChoiceIsEmpty()
-    {
-        $readErrorChar = '*';
-
-        return ! $this->test_taker_first_choice || trim($this->test_taker_first_choice) == $readErrorChar;
+        return new Recommendation($this->iq->score(), $this->first_choice, $this->second_choice);
     }
 }

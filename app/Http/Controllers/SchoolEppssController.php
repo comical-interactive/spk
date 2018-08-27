@@ -17,7 +17,7 @@ class SchoolEppssController extends Controller
         $downloadable = collect(range(1, $school->mbti_epps_lss_count));
         $downloadableCount = 25;
 
-        return view('school-epps.download-list', compact('school', 'downloadable', 'downloadableCount'));
+        return view('school-eppss.download-list', compact('school', 'downloadable', 'downloadableCount'));
     }
 
     public function download(Request $request, School $school)

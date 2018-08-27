@@ -23,7 +23,7 @@ Myers–Briggs Type Indicator, Edward Personal Preference Schedule, Learning Sty
             Download Laporan EPPS
           </a>
 
-          <a href="{{ route('school-ls.download-list', compact('school')) }}" class="btn btn-info btn-fill">
+          <a href="{{ route('school-lss.download-list', compact('school')) }}" class="btn btn-info btn-fill">
             Download Laporan LS
           </a>
         </div>

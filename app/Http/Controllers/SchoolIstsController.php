@@ -37,7 +37,7 @@ class SchoolIstsController extends Controller
             $school->ists()->delete();
         }
 
-        $attributes = (new IstParser($request->file, 3))->parse()->toArray();
+        $attributes = (new IstParser($request->file))->parse()->toArray();
 
         if ($school->importTest('ists', $attributes)) {
             return redirect()->back()->with('flash', 'Data Berhasil diimport');

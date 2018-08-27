@@ -21,7 +21,7 @@
         </a>
       </li>
 
-      <li :class="setActive('mbti-epps-ls')">
+      <li :class="setActive('mbtis') || setActive('eppss') || setActive('lss')">
         <a href="{{ route('school-mels.index') }}">
           <i class="ti-agenda"></i>
           <p>MBTI EPPS LS</p>

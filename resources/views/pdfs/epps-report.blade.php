@@ -33,7 +33,7 @@
           <tr>
             <td>KEPERCAYAAN DIRI</td>
             <td>Kurang mampu menunjukkan performa yang mengekspresikan kelebihan yang dimilikinya</td>
-            @grade(['grade' => $model->epps->grades()['ach']])
+            @grade(['grade' => $model->epps->ach_grade])
             @endgrade
             <td>Sangat mampu menunjukkan performa yang mengekspresikan kelebihan yang dimilikinya</td>
           </tr>
@@ -41,7 +41,7 @@
           <tr>
             <td>PENYESUAIAN DIRI</td>
             <td>Kurang mampu melakukan adaptasi dan menyatu dengan lingkungan yang baru & berbeda</td>
-            @grade(['grade' => $model->epps->grades()['ach']])
+            @grade(['grade' => $model->epps->ach_grade])
             @endgrade
             <td>Sangat mampu melakukan adaptasi dan menyatu dengan lingkungan yang baru & berbeda</td>
           </tr>
@@ -50,7 +50,7 @@
             <td>KESTABILAN EMOSI</td>
             <td>Kurang mampu mengelola emosinya jika dihadapkan pada stimulus dari lingkungan yang tidak sesuai dengan
             kondisi mereka/ bersifat menekan</td>
-            @grade(['grade' => $model->epps->grades()['ach']])
+            @grade(['grade' => $model->epps->ach_grade])
             @endgrade
             <td>Sangat mampu mengelola emosinya jika dihadapkan pada stimulus dari lingkungan yang tidak sesuai dengan
             kondisi mereka/ bersifat menekan</td>
@@ -60,7 +60,7 @@
             <td>TANGGUNG JAWAB/ KOMITMEN TERHADAP TUGAS</td>
             <td>Kurang menunjukkan komitmen yang kuat dan berbuat yang terbaik sampai selesai saat dihadapkan pada suatu
             tugas</td>
-            @grade(['grade' => $model->epps->grades()['ach']])
+            @grade(['grade' => $model->epps->ach_grade])
             @endgrade
             <td>Menunjukkan komitmen yang sangat kuat dan berbuat yang terbaik sampai selesai saat dihadapkan pada suatu
             tugas</td>
