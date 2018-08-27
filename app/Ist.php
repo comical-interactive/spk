@@ -58,7 +58,7 @@ class Ist extends Model
 
     public function getSecondChoiceRecommendationAttribute()
     {
-        if ($this->test_taker_first_choice == 'IPS' || $this->first_choice_recommendation == 'IPS') {
+        if ($this->test_taker_first_choice == 'IPS' || $this->first_choice_recommendation == 'IIS') {
             return 'IBB';
         }
 
