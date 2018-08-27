@@ -42,10 +42,18 @@ class Ist extends Model
     public function getFirstChoiceRecommendationAttribute()
     {
         if ($this->iq->score() >= 80) {
-            return $this->test_taker_first_choice ?: 'IPA';
+            if ($this->firstChoiceIsEmpty() || $this->test_taker_first_choice == 'IPA') {
+                return 'MIA';
+            }
+
+            if ($this->test_taker_first_choice == 'IPS') {
+                return 'IIS';
+            }
+
+            return $this->test_taker_first_choice;
         }
 
-        return 'IPS';
+        return 'IIS';
     }
 
     public function getSecondChoiceRecommendationAttribute()
@@ -54,6 +62,13 @@ class Ist extends Model
             return 'IBB';
         }
 
-        return 'IPS';
+        return 'IIS';
+    }
+
+    protected function firstChoiceIsEmpty()
+    {
+        $readErrorChar = '*';
+
+        return ! $this->test_taker_first_choice || trim($this->test_taker_first_choice) == $readErrorChar;
     }
 }

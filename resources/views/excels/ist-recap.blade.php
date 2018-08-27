@@ -42,13 +42,13 @@
       </tr>
 
       <tr>
-        <td>IPA</td>
-        <td>Ilmu Pengetahuan Alam</td>
+        <td>MIA</td>
+        <td>Matematika dan Ilmu Alam</td>
       </tr>
 
       <tr>
-        <td>IPS</td>
-        <td>Ilmu Pengetahuan Sosial</td>
+        <td>IIS</td>
+        <td>Ilmu Ilmu Sosial</td>
       </tr>
 
       <tr>

@@ -37,6 +37,6 @@ class SchoolLssController extends Controller
 
         $pdf = PDF::loadView('pdfs.ls-report', compact('school', 'mbtiEppsLss'));
 
-        return $pdf->stream("{$fileName}.pdf");
+        return $pdf->download("{$fileName}.pdf");
     }
 }
