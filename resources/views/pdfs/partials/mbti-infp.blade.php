@@ -30,9 +30,3 @@
 
     <p>Penulis, Sastrawan, Konselor, Psikolog, Pengajar, Seniman, Rohaniawan, Bidang Hospitality</p>
 </div>
-
-<div>
-    <h3>Pasangan/Partner Alami</h3>
-
-    <p><strong>ENFJ</strong> atau <strong>ESFJ</strong></p>
-</div>

@@ -27,9 +27,3 @@
 
     <p>Konsultan, Psikolog, Konselor, Pengajar, Marketing, HRD, Event Coordinator, Entertainer, Penulis, Motivator</p>
 </div>
-
-<div>
-    <h3>Pasangan/Partner Alami</h3>
-
-    <p><strong>INFP</strong> atau <strong>ISFP</strong></p>
-</div>

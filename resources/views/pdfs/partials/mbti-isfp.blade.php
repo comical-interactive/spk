@@ -26,9 +26,3 @@
 
     <p>Seniman, Designer, Pekerja Sosial, Konselor, Psikolog, Guru, Aktor, Bidang Hospitality</p>
 </div>
-
-<div>
-    <h3>Pasangan/Partner Alami</h3>
-
-    <p><strong>ESFJ</strong> atau <strong>ENFJ</strong></p>
-</div>

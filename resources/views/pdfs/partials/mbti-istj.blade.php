@@ -29,9 +29,3 @@
         atau yang berhubungan dengan IT, System Analys, Pemimpin Militer
     </p>
 </div>
-
-<div>
-    <h3>Pasangan/Partner Alami</h3>
-
-    <p><strong>ESFP</strong> atau <strong>ESTP</strong></p>
-</div>

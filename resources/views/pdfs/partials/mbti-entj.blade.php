@@ -28,9 +28,3 @@
 
     <p>Entrepreneur, Pengacara, Hakim, Konsultan, Pemimpin Organisasi, Business Analyst, Bidang Finansial</p>
 </div>
-
-<div>
-    <h3>Pasangan/Partner Alami</h3>
-
-    <p><strong>INTP</strong> atau <strong>ISTP</strong></p>
-</div>

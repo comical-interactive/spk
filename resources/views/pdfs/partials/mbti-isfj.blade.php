@@ -26,9 +26,3 @@
     <p>Architect, Interior Designer, Perawat, Administratif, Designer, Child Care, Konselor, Back Office Manager,
     Penjaga Toko / Perpustakaan, Dunia Perhotelan.</p>
 </div>
-
-<div>
-    <h3>Pasangan/Partner Alami</h3>
-
-    <p><strong>ESFP</strong> atau <strong>ESTP</strong></p>
-</div>

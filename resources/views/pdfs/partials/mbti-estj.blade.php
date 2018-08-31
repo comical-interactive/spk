@@ -27,9 +27,3 @@
 
     <p>Militer, Manajer, Polisi, Hakim, Pengacara, Guru, Sales, Auditor, Akuntan, System Analyst</p>
 </div>
-
-<div>
-    <h3>Pasangan/Partner Alami</h3>
-
-    <p><strong>ISTP</strong> atau <strong>INTP</strong></p>
-</div>

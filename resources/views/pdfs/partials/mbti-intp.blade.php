@@ -27,9 +27,3 @@
 
     <p>Ilmuwan, Fotografer, Programmer, Ahli komputer, System Analyst, Penulis Buku Teknis, Ahli Forensik, Jaksa, Pengacara, Teknisi</p>
 </div>
-
-<div>
-    <h3>Pasangan/Partner Alami</h3>
-
-    <p><strong>ENTJ</strong> atau <strong>ESTJ</strong></p>
-</div>

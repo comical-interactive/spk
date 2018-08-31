@@ -28,9 +28,3 @@
 
     <p>Marketing, Sales, Polisi, Entrepreneur, Pialang Saham, Technical Support</p>
 </div>
-
-<div>
-    <h3>Pasangan/Partner Alami</h3>
-
-    <p><strong>ISFJ</strong> atau <strong>ISTJ</strong></p>
-</div>

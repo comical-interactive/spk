@@ -30,9 +30,3 @@
     <p>Peneliti, Ilmuwan, Insinyur, Teknisi, Pengajar, Profesor, Dokter, Research & Development, Business Analyst,
     System Analyst, Pengacara, Hakim, Programmers, Posisi Strategis dalam organisasi.</p>
 </div>
-
-<div>
-    <h3>Pasangan/Partner Alami</h3>
-
-    <p><strong>ENFP</strong> atau <strong>ENTP</strong></p>
-</div>

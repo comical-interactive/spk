@@ -27,9 +27,3 @@
 
     <p>Perencana Keuangan, Perawat, Guru, Bidang anak-anak, Konselor, Administratif, Hospitality</p>
 </div>
-
-<div>
-    <h3>Pasangan/Partner Alami</h3>
-
-    <p><strong>ISFP</strong> atau <strong>INFP</strong></p>
-</div>

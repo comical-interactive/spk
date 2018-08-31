@@ -27,9 +27,3 @@
 
     <p>Entertainer, Seniman, Marketing, Konselor, Designer, Tour Guide, Bidang Anak-anak, Bidang Hospitality</p>
 </div>
-
-<div>
-    <h3>Pasangan/Partner Alami</h3>
-
-    <p><strong>ISTJ</strong> atau <strong>ISFJ</strong></p>
-</div>

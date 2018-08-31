@@ -27,9 +27,3 @@
 
     <p>Pengacara, Psikolog, Konsultan, Ilmuwan, Aktor,Marketing, Programmer, Fotografer</p>
 </div>
-
-<div>
-    <h3>Pasangan/Partner Alami</h3>
-
-    <p><strong>INFJ</strong> atau <strong>INTJ</strong></p>
-</div>

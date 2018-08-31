@@ -55,7 +55,7 @@
 
             @if ($model->mbti->isValid())
                 <div>
-                    <h3>Hasil Test MBTI</h3>
+                    <h3>Tipe Kepribadian</h3>
 
                     <table>
                         <tr>

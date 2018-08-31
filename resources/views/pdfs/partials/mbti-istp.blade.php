@@ -28,9 +28,3 @@
 
     <p>Polisi, Ahli Forensik, Programmer, Ahli Komputer, System Analyst, Teknisi, Insinyur, Mekanik, Pilot, Atlit, Entrepreneur</p>
 </div>
-
-<div>
-    <h3>Pasangan/Partner Alami</h3>
-
-    <p><strong>ESTJ</strong> atau <strong>ENTJ</strong></p>
-</div>

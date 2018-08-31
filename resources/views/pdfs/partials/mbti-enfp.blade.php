@@ -26,9 +26,3 @@
 
     <p>Konselor, Psikolog, Entertainer, Pengajar, Motivator, Presenter, Reporter, MC, Seniman, Hospitality</p>
 </div>
-
-<div>
-    <h3>Pasangan/Partner Alami</h3>
-
-    <p><strong>INTJ</strong> atau <strong>INFJ</strong></p>
-</div>

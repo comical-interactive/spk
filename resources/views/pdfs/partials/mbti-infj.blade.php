@@ -26,9 +26,3 @@
 
     <p>Pengajar, Psikolog, Dokter, Konselor, Pekerja Sosial, Fotografer, Seniman, Designer, Child Care.</p>
 </div>
-
-<div>
-    <h3>Pasangan/Partner Alami</h3>
-
-    <p><strong>ESFP</strong> atau <strong>ESTP</strong></p>
-</div>
