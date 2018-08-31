@@ -5,5 +5,5 @@
 @endsection
 
 @section('content')
-  @include('layouts.partials.test-index', ['routeName' => 'school-mels.show', 'footerText' => 'Lihat IST'])
+  @include('layouts.partials.test-index', ['routeName' => 'school-mels.show', 'footerText' => 'Lihat MBTI EPPS LS'])
 @endsection
