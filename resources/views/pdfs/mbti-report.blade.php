@@ -88,7 +88,7 @@
                     </table>
                 </div>
 
-                @include('pdfs.partials.mbti-{{ $model->mbti->type }}')
+                @include("pdfs.partials.mbti-{$model->mbti->type}")
 
 
             @else
