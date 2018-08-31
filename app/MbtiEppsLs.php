@@ -14,8 +14,13 @@ class MbtiEppsLs extends Model
      * @var array
      */
     protected $appends = [
-        'epps', 'ls'
+        'mbti', 'epps', 'ls'
     ];
+
+    public function getMbtiAttribute()
+    {
+        return new Mbti($this);
+    }
 
     public function getEppsAttribute()
     {

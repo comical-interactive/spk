@@ -15,7 +15,7 @@ Myers–Briggs Type Indicator, Edward Personal Preference Schedule, Learning Sty
         </div>
 
         <div class="col-md-6 text-right">
-          <a href="#" class="btn btn-info btn-fill">
+          <a href="{{ route('school-mbtis.download-list', compact('school')) }}" class="btn btn-info btn-fill">
             Download Laporan MBTI
           </a>
 

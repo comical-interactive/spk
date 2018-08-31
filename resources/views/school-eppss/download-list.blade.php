@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('page-title')
-Myers–Briggs Type Indicator, Edward Personal Preference Schedule, Learning Style
+Edward Personal Preference Schedule
 @endsection
 
 @section('content')
