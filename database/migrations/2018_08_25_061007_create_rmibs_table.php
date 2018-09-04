@@ -30,6 +30,8 @@ class CreateRmibsTable extends Migration
             $table->string('f_answers');
             $table->string('g_answers');
             $table->string('h_answers');
+            $table->string('first_recommendation')->nullable();
+            $table->string('second_recommendation')->nullable();
             $table->timestamps();
         });
     }

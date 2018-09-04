@@ -6,6 +6,7 @@ use PDF;
 use App\School;
 use App\Parser\RmibParser;
 use Illuminate\Http\Request;
+use App\Parser\IstRecapParser;
 
 class SchoolRmibsController extends Controller
 {
@@ -42,6 +43,19 @@ class SchoolRmibsController extends Controller
         }
 
         return redirect()->back()->with('error', 'Gagal mengimport data');
+    }
+
+    public function importIstRecap(Request $request, School $school)
+    {
+        $request->validate(['file' => 'required|file']);
+
+        if ($school->rmibs_count <= 0) {
+            return redirect()->back()->with('error', 'Tidak ada data rmib');
+        }
+
+        $school->importIstRecap((new IstRecapParser($request->file, $dataRowStart = 11))->parse());
+
+        return redirect()->back()->with('flash', 'Data Berhasil diimport');
     }
 
     public function showDownloadList(Request $request, School $school)

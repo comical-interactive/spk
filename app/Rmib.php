@@ -8,6 +8,34 @@ class Rmib extends Model
 {
     protected $guarded = ['test_date'];
 
+    public function match(School $school, $attributes)
+    {
+        // match by test number
+        $matchesByTestNumber = $school->rmibs()->where('test_taker_number', $attributes['test_taker_number'])->get();
+
+        if ($matchesByTestNumber->count() === 1) {
+            return $matchesByTestNumber->first()->fillRecommendation($attributes);
+        }
+
+        // if no match by id, match by name
+        $matchesByName = $school->rmibs()->where('test_taker_name', $attributes['test_taker_name'])->get();
+
+        if ($matchesByName->count() === 1) {
+            return $matchesByName->first()->fillRecommendation($attributes);
+        }
+
+        // no match or multiple match
+        return;
+    }
+
+    public function fillRecommendation($attributes)
+    {
+        $this->first_recommendation = $attributes['first_recommendation'];
+        $this->second_recommendation = $attributes['second_recommendation'];
+
+        $this->save();
+    }
+
     public function getSumsAttribute()
     {
         $sums = [];

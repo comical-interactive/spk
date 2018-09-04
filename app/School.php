@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Support\Collection;
 use Illuminate\Database\Eloquent\Model;
 
 class School extends Model
@@ -43,13 +44,20 @@ class School extends Model
 
     public function importTest($test, $attributes)
     {
-        if (! method_exists($this, $test)) {
+        if (!method_exists($this, $test)) {
             throw new \Exception("{$test} does not exists!");
         }
 
         $relation = call_user_func([$this, $test]);
 
         return $relation->createMany($attributes);
+    }
+
+    public function importIstRecap(Collection $recap)
+    {
+        $recap->each(function ($item) {
+            app(Rmib::class)->match($this, $item);
+        });
     }
 
     public function reset()

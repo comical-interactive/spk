@@ -15,9 +15,27 @@ Rothwell Miller Interest Blank
         </div>
 
         <div class="col-md-6 text-right">
-            <a href="{{ route('school-rmibs.download-list', compact('school')) }}" class="btn btn-info btn-fill">
+          <ul class="list-inline">
+            <li>
+              <form action="{{ route('school-rmibs.import-ist-recap', compact('school')) }}" method="POST" enctype="multipart/form-data">
+                @csrf
+
+                <div class="input-group">
+                  <input type="file" name="file">
+
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary btn-fill" type="submit">Upload</button>
+                  </span>
+                </div>
+              </form>
+            </li>
+
+            <li>
+              <a href="{{ route('school-rmibs.download-list', compact('school')) }}" class="btn btn-info btn-fill">
                 Download Laporan RMIB
-            </a>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
