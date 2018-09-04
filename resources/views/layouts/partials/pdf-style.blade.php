@@ -10,7 +10,8 @@
     }
 
     body {
-        padding: 0 40px;
+        padding: 0;
+        margin: 0;
     }
 
     .page-break {
@@ -28,7 +29,8 @@
 
     h2.table-heading {
         font-weight: 800;
-        color: maroon
+        color: maroon;
+        margin-bottom: .5rem;
     }
 
     table {

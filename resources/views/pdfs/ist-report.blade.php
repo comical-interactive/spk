@@ -15,16 +15,16 @@
 
       <h2 class="table-heading">PROFIL KEMAMPUAN  UMUM DAN KHUSUS</h2>
 
-      <table class="table table-bordered table-grade">
+      <table class="table table-bordered table-condensed table-grade">
         <thead>
           <tr>
-            <th>ASPEK</th>
+            <th style="width: 130px">ASPEK</th>
             <th>GAMBARAN SKOR RENDAH</th>
-            <th>SK</th>
-            <th>K</th>
-            <th>S</th>
-            <th>B</th>
-            <th>SB</th>
+            <th style="width: 20px">SK</th>
+            <th style="width: 20px">K</th>
+            <th style="width: 20px">S</th>
+            <th style="width: 20px">B</th>
+            <th style="width: 20px">SB</th>
             <th>GAMBARAN SKOR TINGGI</th>
           </tr>
         </thead>
@@ -117,8 +117,8 @@
         </tfoot>
       </table>
 
-      <div style="margin-top: 30px">
-        <table class="table table-bordered" style="background: aliceblue; font-size: 1.25rem; font-weight: 800">
+      <div>
+        <table class="table table-bordered table-condensed" style="background: aliceblue; font-size: 1.25rem; font-weight: 800">
           <tr>
             <td style="text-align: center">IQ</td>
             <td>{{ $ist->iq->score() }} ({{ $ist->iq->gradeInWord() }}, menurut IST)</td>
