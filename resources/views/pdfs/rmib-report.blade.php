@@ -13,8 +13,9 @@
     <section>
       <h3>PROFIL MINAT</h3>
 
-      <p>Berdasarkan hasil asesmen psikologis, berikut profil peminatan untuk ananda<strong>
-      {{ $rmib->test_taker_name }}</strong></p>
+      <p>Berdasarkan hasil penelusuran minat Ananda <strong>{{ $rmib->test_taker_name }}</strong>,
+      berikut urutan minat mulai dari yang paling diminati (peringkat 1) hingga yang kurang diminati
+      (peringkat 12)</p>
 
       <table class="table table-bordered table-condensed">
         <thead>
@@ -28,8 +29,8 @@
           @foreach ($rmib->ranks as $interest => $interestPoint)
             <tr>
               <td style="text-align: center">{{ $loop->index + 1 }}</td>
-              <td scope="col" style="width: 110px">{{ $interest }}</td>
-              <td>{{ config("constants.rmib.interests.{$interest}") }}</td>
+              <td style="width: 80px; border-right: 0">{{ $interest }}</td>
+              <td style="border-left: 0">: {{ config("constants.rmib.interests.{$interest}") }}</td>
             </tr>
           @endforeach
         </tbody>
