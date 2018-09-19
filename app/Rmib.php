@@ -88,26 +88,19 @@ class Rmib extends Model
 
     public function getRanksAttribute()
     {
-        $result = range(1, 12);
-        $rank = $this->getRank($this->sums);
-        $indexRank = array_combine(range(1, 12), array_keys($rank));
+        $interests = config('constants.rmib.interests');
 
-        foreach ($indexRank as $key => $value) {
-            $result[$value] = $key;
-        }
+        // combine each interest with its point
+        $interestRank = array_combine(array_keys($interests), $this->sums);
 
-        return array_values($result);
+        // sort the interest from highest point to lowest point
+        array_multisort($interestRank, SORT_DESC);
+
+        return $interestRank;
     }
 
     public function setSexAttribute($value)
     {
         $this->attributes['sex'] = strtolower($value);
-    }
-
-    protected function getRank($array)
-    {
-        asort($array);
-
-        return $array;
     }
 }

@@ -19,110 +19,19 @@
       <table class="table table-bordered table-condensed">
         <thead>
           <tr>
-            <th rowspan="2" style="width: 110px">&nbsp;</th>
-            <th colspan="12" style="text-align: center">ASPEK MINAT</th>
-          </tr>
-          <tr>
-            <th>OUT</th>
-            <th>MEC</th>
-            <th>COM</th>
-            <th>SCI</th>
-            <th>PER</th>
-            <th>AES</th>
-            <th>MUS</th>
-            <th>LIT</th>
-            <th>SOC</th>
-            <th>CLE</th>
-            <th>PRA</th>
-            <th>MED</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td scope="col">SKOR</td>
-            @foreach ($rmib->sums as $row)
-              <td style="text-align: center">{{ $row }}</td>
-            @endforeach
-          </tr>
-
-          <tr>
-            <td scope="col">PERINGKAT MINAT</td>
-            @foreach ($rmib->ranks as $row)
-              <td style="text-align: center">{{ $row }}</td>
-            @endforeach
-          </tr>
-        </tbody>
-      </table>
-
-      <table class="table table-bordered table-condensed">
-        <thead>
-          <tr>
+            <th scope="col" style="text-align: center; width: 110px">PERINGKAT MINAT</th>
             <th scope="col" colspan="2" style="text-align: center">MINAT</th>
           </tr>
         </thead>
 
         <tbody>
-          <tr>
-            <th scope="col" style="width: 110px">Outdoor</th>
-            <td>Aktivitas yand dilakukan di luar atau di lapangan terbuka</td>
-          </tr>
-
-          <tr>
-            <th scope="col">Mechanical</th>
-            <td>Aktivitas yang berhubungan dengan mesin, alat-alat dan daya mekanik</td>
-          </tr>
-
-          <tr>
-            <th scope="col">Computational</th>
-            <td>Aktivitas yang berhubungan dengan angka-angka</td>
-          </tr>
-
-          <tr>
-            <th scope="col">Scientific</th>
-            <td>Aktivitas yang berhubungan dengan keaktifan dalam hal analisa, penyelidikan dan eksperimen</td>
-          </tr>
-
-          <tr>
-            <th scope="col">Persuasive</th>
-            <td>Aktivitas yang berhubungan dengan diskusi, membujuk dan bergaul dengan orang lain atau aktivitas yang
-            membutuhkan kontak dengan orang lain</td>
-          </tr>
-
-          <tr>
-            <th scope="col">Aesthetic</th>
-            <td>Aktivitas yang berhubungan dengan hal-hal yang bersifat seni dan kreativitas</td>
-          </tr>
-
-          <tr>
-            <th scope="col">Literary</th>
-            <td>Aktivitas yang berhubungan dengan buku-buku, kegiatan membaca dan menulis/mengarang</td>
-          </tr>
-
-          <tr>
-            <th scope="col">Musical</th>
-            <td>Aktivitas yang berhubungan dengan musik</td>
-          </tr>
-
-          <tr>
-            <th scope="col">Social Service</th>
-            <td>Aktivitas yang berhubungan dengan menolong, membimbing dan menasehati orang lain</td>
-          </tr>
-
-          <tr>
-            <th scope="col">Clerical</th>
-            <td>Aktivitas yang bersifat rutin yang menuntut ketepatan dan ketelitian</td>
-          </tr>
-
-          <tr>
-            <th scope="col">Practical</th>
-            <td>Aktivitas yang bersifat praktis, karya pertukangan, dan yang memerlukan keterampilan</td>
-          </tr>
-
-          <tr>
-            <th scope="col">Medical</th>
-            <td>Aktivitas yang berhubungan dengan pengobatan</td>
-          </tr>
+          @foreach ($rmib->ranks as $interest => $interestPoint)
+            <tr>
+              <td style="text-align: center">{{ $loop->index + 1 }}</td>
+              <td scope="col" style="width: 110px">{{ $interest }}</td>
+              <td>{{ config("constants.rmib.interests.{$interest}") }}</td>
+            </tr>
+          @endforeach
         </tbody>
       </table>
 

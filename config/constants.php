@@ -382,6 +382,20 @@ return [
             'g_answers',
             'h_answers',
         ],
+        'interests' => [
+            'Outdoor' => 'Aktivitas yand dilakukan di luar atau di lapangan terbuka',
+            'Mechanical' => 'Aktivitas yang berhubungan dengan mesin, alat-alat dan daya mekanik',
+            'Computational' => 'Aktivitas yang berhubungan dengan angka-angka',
+            'Science' => 'Aktivitas yang berhubungan dengan keaktifan dalam hal analisa, penyelidikan dan eksperimen',
+            'Persuasive' => 'Aktivitas yang berhubungan dengan diskusi, membujuk dan bergaul dengan orang lain atau aktivitas yang membutuhkan kontak dengan orang lain',
+            'Aesthetic' => 'Aktivitas yang berhubungan dengan hal-hal yang bersifat seni dan kreativitas',
+            'Musical' => 'Aktivitas yang berhubungan dengan musik',
+            'Literary' => 'Aktivitas yang berhubungan dengan buku-buku, kegiatan membaca dan menulis/mengarang',
+            'Social Service' => 'Aktivitas yang berhubungan dengan menolong, membimbing dan menasehati orang lain',
+            'Clerical' => 'Aktivitas yang bersifat rutin yang menuntut ketepatan dan ketelitian',
+            'Practical' => 'Aktivitas yang bersifat praktis, karya pertukangan, dan yang memerlukan keterampilan',
+            'Medical' => 'Aktivitas yang berhubungan dengan pengobatan',
+        ]
     ],
     'mels' => [
         'columns' => [
