@@ -49,11 +49,8 @@
           <tr>
             <td>DAYA TANGKAP</td>
             <td>Kurang cepat atau tepat dalam memahami dan mengolah informasi atau data</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            @grade(['grade' => $ist->iq->grade()])
+            @endgrade
             <td>Sangat  cepat atau tepat dalam memahami dan mengolah informasi atau data</td>
           </tr>
 
