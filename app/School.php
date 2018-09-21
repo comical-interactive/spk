@@ -29,17 +29,17 @@ class School extends Model
 
     public function ists()
     {
-        return $this->hasMany(Ist::class);
+        return $this->hasMany(Ist::class)->orderBy('test_taker_index', 'asc');
     }
 
     public function rmibs()
     {
-        return $this->hasMany(Rmib::class);
+        return $this->hasMany(Rmib::class)->orderBy('test_taker_index', 'asc');
     }
 
     public function mbtiEppsLss()
     {
-        return $this->hasMany(MbtiEppsLs::class);
+        return $this->hasMany(MbtiEppsLs::class)->orderBy('test_taker_index', 'asc');
     }
 
     public function importTest($test, $attributes)
