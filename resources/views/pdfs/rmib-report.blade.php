@@ -9,7 +9,7 @@
   @include('layouts.partials.pdf-style')
 </head>
 <body>
-  @foreach($rmibs as $rmib)
+  @foreach($school->rmibs as $rmib)
     <section>
       <h3>PROFIL MINAT</h3>
 

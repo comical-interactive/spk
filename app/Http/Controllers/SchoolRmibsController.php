@@ -58,35 +58,10 @@ class SchoolRmibsController extends Controller
         return redirect()->back()->with('flash', 'Data Berhasil diimport');
     }
 
-    public function showDownloadList(Request $request, School $school)
-    {
-        if ($school->rmibs_count <= 0) {
-            return redirect()->back()->with('error', 'Tidak ada data RMIB');
-        }
-
-        $downloadable = collect(range(1, $school->rmibs_count));
-        $downloadableCount = 25;
-
-        return view('school-rmibs.download-list', compact('school', 'downloadable', 'downloadableCount'));
-    }
-
     public function download(Request $request, School $school)
     {
-        $rmibs = $school->rmibs();
-        $downloadableCount = 25;
+        $pdf = PDF::loadView('pdfs.rmib-report', compact('school'));
 
-        if ($request->has('offset')) {
-            $start = $request->offset + 1;
-            $end = $request->offset + $downloadableCount;
-            $fileName = "Laporan RMIB {$school->name} Nomor Urut {$start} - {$end}";
-            $rmibs = $rmibs->offset($request->offset)->limit($downloadableCount)->get();
-        } else {
-            $fileName = "Laporan RMIB {$school->name}";
-            $rmibs = $rmibs->get();
-        }
-
-        $pdf = PDF::loadView('pdfs.rmib-report', compact('school', 'rmibs'));
-
-        return $pdf->download("{$fileName}.pdf");
+        return $pdf->download("Laporan RMIB {$school->name}.pdf");
     }
 }

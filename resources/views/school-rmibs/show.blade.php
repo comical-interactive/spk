@@ -31,7 +31,7 @@ Rothwell Miller Interest Blank
             </li>
 
             <li>
-              <a href="{{ route('school-rmibs.download-list', compact('school')) }}" class="btn btn-info btn-fill">
+              <a href="{{ route('school-rmibs.download', compact('school')) }}" class="btn btn-info btn-fill">
                 Download Laporan RMIB
               </a>
             </li>

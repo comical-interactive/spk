@@ -22,10 +22,8 @@ Route::get('schools/{school}/ists/download', 'SchoolIstsController@download')->n
 Route::get('rmibs', 'SchoolRmibsController@index')->name('school-rmibs.index');
 Route::get('schools/{school}/rmibs', 'SchoolRmibsController@show')->name('school-rmibs.show');
 Route::post('schools/{school}/rmibs', 'SchoolRmibsController@import')->name('school-rmibs.import');
-Route::post('schools/{school}/rmib-ist', 'SchoolRmibsController@importIstRecap')->name('school-rmibs.import-ist-recap');
-
 Route::get('schools/{school}/rmibs/download', 'SchoolRmibsController@download')->name('school-rmibs.download');
-Route::get('schools/{school}/rmibs/download-list', 'SchoolRmibsController@showDownloadList')->name('school-rmibs.download-list');
+Route::post('schools/{school}/rmib-ist', 'SchoolRmibsController@importIstRecap')->name('school-rmibs.import-ist-recap');
 
 Route::get('mbti-epps-ls', 'SchoolMbtiEppsLssController@index')->name('school-mels.index');
 Route::get('schools/{school}/mbti-epps-ls', 'SchoolMbtiEppsLssController@show')->name('school-mels.show');
