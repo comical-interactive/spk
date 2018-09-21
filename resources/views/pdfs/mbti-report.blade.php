@@ -47,7 +47,7 @@
     </style>
 </head>
 <body>
-    @foreach($mbtiEppsLss as $model)
+    @foreach($school->mbtiEppsLss as $model)
         <section>
             <div>
                 <h4>Nama: {{ $model->test_taker_name }}</h4>

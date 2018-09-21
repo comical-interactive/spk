@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use PDF;
 use App\School;
 use Illuminate\Http\Request;
 use App\Parser\MbtiEppsLsParser;
@@ -41,5 +42,32 @@ class SchoolMbtiEppsLssController extends Controller
         }
 
         return redirect()->back()->with('error', 'Gagal mengimport data');
+    }
+
+    public function download(Request $request, School $school, $test)
+    {
+        switch ($test) {
+            case 'mbti':
+                $pdfView = 'pdfs.mbti-report';
+                $filename = "Laporan MBTI {$school->name}";
+                break;
+
+            case 'epps':
+                $pdfView = 'pdfs.epps-report';
+                $filename = "Laporan EPPS {$school->name}";
+                break;
+            
+            case 'ls':
+                $pdfView = 'pdfs.ls-report';
+                $filename = "Laporan LS {$school->name}";
+                break;
+            
+            default:
+                abort(404);
+        }
+
+        $pdf = PDF::loadView($pdfView, compact('school'));
+
+        return $pdf->download("{$filename}.pdf");
     }
 }

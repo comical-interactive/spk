@@ -9,7 +9,7 @@
   @include('layouts.partials.pdf-style')
 </head>
 <body>
-  @foreach($mbtiEppsLss as $model)
+  @foreach($school->mbtiEppsLss as $model)
     <section>
       @include('layouts.partials.pdf-header')
 

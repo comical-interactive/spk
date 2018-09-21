@@ -28,15 +28,7 @@ Route::post('schools/{school}/rmib-ist', 'SchoolRmibsController@importIstRecap')
 Route::get('mbti-epps-ls', 'SchoolMbtiEppsLssController@index')->name('school-mels.index');
 Route::get('schools/{school}/mbti-epps-ls', 'SchoolMbtiEppsLssController@show')->name('school-mels.show');
 Route::post('schools/{school}/mbti-epps-ls', 'SchoolMbtiEppsLssController@import')->name('school-mels.import');
-
-Route::get('schools/{school}/mbtis/download', 'SchoolMbtisController@download')->name('school-mbtis.download');
-Route::get('schools/{school}/mbtis/download-list', 'SchoolMbtisController@showDownloadList')->name('school-mbtis.download-list');
-
-Route::get('schools/{school}/eppss/download', 'SchoolEppssController@download')->name('school-eppss.download');
-Route::get('schools/{school}/eppss/download-list', 'SchoolEppssController@showDownloadList')->name('school-eppss.download-list');
-
-Route::get('schools/{school}/lss/download', 'SchoolLssController@download')->name('school-lss.download');
-Route::get('schools/{school}/lss/download-list', 'SchoolLssController@showDownloadList')->name('school-lss.download-list');
+Route::get('schools/{school}/mbti-epps-ls/download/{test}', 'SchoolMbtiEppsLssController@download')->name('school-mels.download');
 
 Route::delete('schools/{school}/reset', 'SchoolsController@reset')->name('schools.reset');
 Route::resource('schools', 'SchoolsController');

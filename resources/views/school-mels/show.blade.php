@@ -15,15 +15,15 @@ Myers–Briggs Type Indicator, Edward Personal Preference Schedule, Learning Sty
         </div>
 
         <div class="col-md-6 text-right">
-          <a href="{{ route('school-mbtis.download-list', compact('school')) }}" class="btn btn-info btn-fill">
+          <a href="{{ route('school-mels.download', ['school' => $school, 'test' => 'mbti']) }}" class="btn btn-info btn-fill">
             Download Laporan MBTI
           </a>
 
-          <a href="{{ route('school-eppss.download-list', compact('school')) }}" class="btn btn-info btn-fill">
+          <a href="{{ route('school-mels.download', ['school' => $school, 'test' => 'epps']) }}" class="btn btn-info btn-fill">
             Download Laporan EPPS
           </a>
 
-          <a href="{{ route('school-lss.download-list', compact('school')) }}" class="btn btn-info btn-fill">
+          <a href="{{ route('school-mels.download', ['school' => $school, 'test' => 'ls']) }}" class="btn btn-info btn-fill">
             Download Laporan LS
           </a>
         </div>

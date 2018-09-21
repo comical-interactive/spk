@@ -47,7 +47,7 @@
     </style>
 </head>
 <body>
-    @foreach($mbtiEppsLss as $model)
+    @foreach($school->mbtiEppsLss as $model)
         <section>
             <h2 class="text-center">GAYA BELAJAR</h2>
 
