@@ -14,7 +14,6 @@
 
         html {
             font-family: 'Open Sans', sans-serif;
-            font-size: 11px;
         }
 
         body {

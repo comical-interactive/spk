@@ -6,25 +6,14 @@
 
     html {
         font-family: 'Open Sans', sans-serif;
-        font-size: 11px;
-    }
-
-    body {
-        padding: 0;
-        margin: 0;
     }
 
     .page-break {
         page-break-after: always;
     }
 
-    .svg {
-        text-align: center;
-    }
-
-    .svg > img {
-        width: 15;
-        height: 15
+    .text-center {
+        text-align: center !important
     }
 
     h2.table-heading {
@@ -64,7 +53,7 @@
         border-top: 1px solid #dddddd;
     }
     .table > thead > tr > th {
-        vertical-align: bottom;
+        vertical-align: middle;
         border-bottom: 2px solid #dddddd;
     }
     .table > caption + thead > tr:first-child > th,

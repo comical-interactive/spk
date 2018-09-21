@@ -14,7 +14,6 @@
 
         html {
             font-family: 'Open Sans', sans-serif;
-            font-size: 11px;
         }
 
         body {
@@ -52,9 +51,9 @@
             <h2 class="text-center">GAYA BELAJAR</h2>
 
             @include("pdfs.partials.ls-{$model->ls}")
-
+            
             <center>
-                <img src="{{ asset('img/ls.jpg') }}">
+                <img src="{{ asset('img/ls.jpg') }}">   
             </center>
 
             @if (! $loop->last)

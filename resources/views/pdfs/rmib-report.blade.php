@@ -20,16 +20,16 @@
       <table class="table table-bordered table-condensed">
         <thead>
           <tr>
-            <th scope="col" style="text-align: center; width: 110px">PERINGKAT MINAT</th>
-            <th scope="col" colspan="2" style="text-align: center">MINAT</th>
+            <th scope="col" class="text-center">PERINGKAT MINAT</th>
+            <th scope="col" colspan="2" class="text-center" style="valign: middle !important">MINAT</th>
           </tr>
         </thead>
 
         <tbody>
           @foreach ($rmib->ranks as $interest => $interestPoint)
             <tr>
-              <td style="text-align: center">{{ $loop->index + 1 }}</td>
-              <td style="width: 80px; border-right: 0">{{ $interest }}</td>
+              <td class="text-center">{{ $loop->index + 1 }}</td>
+              <td style="border-right: 0">{{ $interest }}</td>
               <td style="border-left: 0">: {{ config("constants.rmib.interests.{$interest}") }}</td>
             </tr>
           @endforeach
@@ -52,21 +52,21 @@
           <tr>
             <th scope="col">REKOMENDASI 1</th>
 
-            <td class="svg">
+            <td class="text-center">
               @if ($rmib->first_recommendation == 'MIA')
-                <img src="{{ asset('check-mark.svg') }}">
+                <img src="{{ asset('img/checkmark.png') }}" height="15">
               @endif
             </td>
             
-            <td class="svg">
+            <td class="text-center">
               @if ($rmib->first_recommendation == 'IIS')
-                <img src="{{ asset('check-mark.svg') }}">
+                <img src="{{ asset('img/checkmark.png') }}" height="15">
               @endif
             </td>
             
-            <td class="svg">
+            <td class="text-center">
               @if ($rmib->first_recommendation == 'IBB')
-                <img src="{{ asset('check-mark.svg') }}">
+                <img src="{{ asset('img/checkmark.png') }}" height="15">
               @endif
             </td>            
           </tr>
@@ -74,21 +74,21 @@
           <tr>
             <th scope="col">REKOMENDASI 2</th>
 
-            <td class="svg">
+            <td class="text-center">
               @if ($rmib->second_recommendation == 'MIA')
-                <img src="{{ asset('check-mark.svg') }}">
+                <img src="{{ asset('img/checkmark.png') }}" height="15">
               @endif
             </td>
             
-            <td class="svg">
+            <td class="text-center">
               @if ($rmib->second_recommendation == 'IIS')
-                <img src="{{ asset('check-mark.svg') }}">
+                <img src="{{ asset('img/checkmark.png') }}" height="15">
               @endif
             </td>
             
-            <td class="svg">
+            <td class="text-center">
               @if ($rmib->second_recommendation == 'IBB')
-                <img src="{{ asset('check-mark.svg') }}">
+                <img src="{{ asset('img/checkmark.png') }}" height="15">
               @endif
             </td>            
           </tr>
