@@ -9,7 +9,7 @@
   @include('layouts.partials.pdf-style')
 </head>
 <body>
-  @foreach($ists as $ist)
+  @foreach($school->ists as $ist)
     <section>
       @include('layouts.partials.pdf-header', ['model' => $ist])
 

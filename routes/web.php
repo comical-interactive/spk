@@ -16,10 +16,8 @@ Route::redirect('/', 'schools');
 Route::get('ists', 'SchoolIstsController@index')->name('school-ists.index');
 Route::get('schools/{school}/ists', 'SchoolIstsController@show')->name('school-ists.show');
 Route::post('schools/{school}/ists', 'SchoolIstsController@import')->name('school-ists.import');
-
 Route::get('schools/{school}/ists/export', 'SchoolIstsController@export')->name('school-ists.export');
 Route::get('schools/{school}/ists/download', 'SchoolIstsController@download')->name('school-ists.download');
-Route::get('schools/{school}/ists/download-list', 'SchoolIstsController@showDownloadList')->name('school-ists.download-list');
 
 Route::get('rmibs', 'SchoolRmibsController@index')->name('school-rmibs.index');
 Route::get('schools/{school}/rmibs', 'SchoolRmibsController@show')->name('school-rmibs.show');

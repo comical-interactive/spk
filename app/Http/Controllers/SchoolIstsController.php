@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use PDF;
 use App\School;
+use App\Parser\IstParser;
 use App\Exports\IstRecap;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
-use App\Parser\IstParser;
 
 class SchoolIstsController extends Controller
 {
@@ -51,35 +51,10 @@ class SchoolIstsController extends Controller
         return Excel::download(new IstRecap($school), "Rekap IST {$school->name}.xls");
     }
 
-    public function showDownloadList(Request $request, School $school)
-    {
-        if ($school->ists_count <= 0) {
-            return redirect()->back()->with('error', 'Tidak ada data IST');
-        }
-
-        $downloadable = collect(range(1, $school->ists_count));
-        $downloadableCount = 25;
-
-        return view('school-ists.download-list', compact('school', 'downloadable', 'downloadableCount'));
-    }
-
     public function download(Request $request, School $school)
     {
-        $ists = $school->ists();
-        $downloadableCount = 25;
+        $pdf = PDF::loadView('pdfs.ist-report', compact('school'));
 
-        if ($request->has('offset')) {
-            $start = $request->offset + 1;
-            $end = $request->offset + $downloadableCount;
-            $fileName = "Laporan IST {$school->name} Nomor Urut {$start} - {$end}";
-            $ists = $ists->offset($request->offset)->limit($downloadableCount)->get();
-        } else {
-            $fileName = "Laporan IST {$school->name}";
-            $ists = $ists->get();
-        }
-
-        $pdf = PDF::loadView('pdfs.ist-report', compact('school', 'ists'));
-
-        return $pdf->download("{$fileName}.pdf");
+        return $pdf->download("Laporan IST {$school->name}.pdf");
     }
 }

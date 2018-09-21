@@ -16,7 +16,7 @@ Intelligenz Struktur Test
 
           <div class="col-md-6 text-right">
             @if ($school->ists_count > 0)
-              <a href="{{ route('school-ists.download-list', compact('school')) }}" class="btn btn-info btn-fill">
+              <a href="{{ route('school-ists.download', compact('school')) }}" class="btn btn-info btn-fill">
                 Download Laporan IST
               </a>
 
