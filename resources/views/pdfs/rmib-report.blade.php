@@ -99,7 +99,7 @@
         <p>Makassar, {{ \Carbon\Carbon::now()->format('d F Y') }}</p>
         <p>Psikolog,</p>
         <p>
-          <img src="{{ asset('img/signature.png') }}" height="80">
+          <img src="{{ asset('img/signature.png') }}" height="130">
         </p>
         <p>Harlina Hamid, S.Psi, M.Si, M.Psi, Psikolog</p>
         <p>SIPP : 02323-17-0013-11-2</p>        
