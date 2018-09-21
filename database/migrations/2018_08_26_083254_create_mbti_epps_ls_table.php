@@ -17,7 +17,7 @@ class CreateMbtiEppsLsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('school_id');
             $table->dateTime('test_date')->nullable();
-            $table->string('test_taker_index');
+            $table->integer('test_taker_index');
             $table->string('test_taker_number');
             $table->string('test_taker_name');
             $table->string('test_taker_age');
