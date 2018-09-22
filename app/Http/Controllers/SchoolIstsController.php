@@ -53,7 +53,7 @@ class SchoolIstsController extends Controller
 
     public function download(Request $request, School $school)
     {
-        if ($school->ists_count <= $downloadable = 250) {
+        if ($school->ists_count <= $downloadable = 200) {
             $pdf = PDF::loadView('pdfs.ist-report', [
                 'school' => $school,
                 'ists' => $school->ists
