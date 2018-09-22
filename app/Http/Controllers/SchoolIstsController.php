@@ -53,8 +53,27 @@ class SchoolIstsController extends Controller
 
     public function download(Request $request, School $school)
     {
-        $pdf = PDF::loadView('pdfs.ist-report', compact('school'));
+        if ($school->ists_count <= $downloadable = 250) {
+            $pdf = PDF::loadView('pdfs.ist-report', [
+                'school' => $school,
+                'ists' => $school->ists
+            ]);
 
-        return $pdf->download("Laporan IST {$school->name}.pdf");
+            return $pdf->download("Laporan IST {$school->name}.pdf");
+        }
+
+        if ($request->has('part')) {
+            $pdf = PDF::loadView('pdfs.ist-report', [
+                'school' => $school,
+                'ists' => $school->ists()->offset($request->part)->limit($downloadable)->get()
+            ]);
+
+            return $pdf->download("Laporan IST {$school->name} - part {$request->part}.pdf");
+        }
+
+        return view('school-ists.download-list', [
+            'school' => $school,
+            'partCount' => ceil($school->ists_count / $downloadable)
+        ]);
     }
 }
