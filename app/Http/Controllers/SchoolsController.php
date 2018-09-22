@@ -13,9 +13,11 @@ class SchoolsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $schools = School::latest()->paginate(12);
+        $take = $request->has('take') && is_numeric($request->take) ? $request->take : 12;
+
+        $schools = School::paginate($take);
 
         return view('schools.index', compact('schools'));
     }

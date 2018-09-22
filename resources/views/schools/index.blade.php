@@ -51,6 +51,8 @@ Data Sekolah
         @else
           <p class="lead">Tidak ada data sekolah</p>
         @endif
+
+        @include('layouts.partials.school-pagination')
       </div>
     </div>
   </div>
