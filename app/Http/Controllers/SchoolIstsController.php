@@ -63,9 +63,11 @@ class SchoolIstsController extends Controller
         }
 
         if ($request->has('part')) {
+            $startIndex = ($request->part - 1) * $downloadable;
+
             $pdf = PDF::loadView('pdfs.ist-report', [
                 'school' => $school,
-                'ists' => $school->ists()->offset($request->part)->limit($downloadable)->get()
+                'ists' => $school->ists()->offset($startIndex)->limit($downloadable)->get()
             ]);
 
             return $pdf->download("Laporan IST {$school->name} - part {$request->part}.pdf");
