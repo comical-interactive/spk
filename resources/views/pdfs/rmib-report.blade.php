@@ -13,9 +13,9 @@
     <section>
       <h3>PROFIL MINAT</h3>
 
-      <p>Berdasarkan hasil penelusuran minat Ananda <strong>{{ $rmib->test_taker_name }}</strong>,
-      berikut urutan minat mulai dari yang paling diminati (peringkat 1) hingga yang kurang diminati
-      (peringkat 12)</p>
+      <p>Berdasarkan hasil penelusuran minat Ananda <strong>{{ $rmib->test_taker_name }} 
+      ({{ $rmib->test_taker_number }})</strong>, berikut urutan minat mulai dari yang paling 
+      diminati (peringkat 1) hingga yang kurang diminati (peringkat 12)</p>
 
       <table class="table table-bordered table-condensed">
         <thead>
