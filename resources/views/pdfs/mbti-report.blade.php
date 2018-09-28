@@ -49,6 +49,7 @@
     @foreach($school->mbtiEppsLss as $model)
         <section>
             <div>
+                <h4>Nomor Test: {{ $model->test_taker_number }}</h4>
                 <h4>Nama: {{ $model->test_taker_name }}</h4>
             </div>
 
