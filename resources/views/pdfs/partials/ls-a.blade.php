@@ -1,5 +1,6 @@
 <p>Menurut hasil tes, tipe Gaya Belajar (Learning Style) yang dominan pada Ananda
-<strong>{{ $model->test_taker_name }}</strong> adalah gaya belajar <strong>Auditori</strong>.</p>
+<strong>{{ $model->test_taker_name }} ({{ $model->test_taker_number}})</strong> 
+adalah gaya belajar <strong>Auditori</strong>.</p>
 
 <h3>Penjelasan</h3>
 
