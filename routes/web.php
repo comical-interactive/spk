@@ -30,6 +30,10 @@ Route::get('schools/{school}/mbti-epps-ls', 'SchoolMbtiEppsLssController@show')-
 Route::post('schools/{school}/mbti-epps-ls', 'SchoolMbtiEppsLssController@import')->name('school-mels.import');
 Route::get('schools/{school}/mbti-epps-ls/download/{test}', 'SchoolMbtiEppsLssController@download')->name('school-mels.download');
 
+Route::get('students', 'SchoolStudentsController@index')->name('school-students.index');
+Route::get('schools/{school}/students', 'SchoolStudentsController@show')->name('school-students.show');
+Route::get('schools/{school}/students/download', 'SchoolStudentsController@download')->name('school-students.download');
+
 Route::delete('schools/{school}/reset', 'SchoolsController@reset')->name('schools.reset');
 Route::resource('schools', 'SchoolsController');
 

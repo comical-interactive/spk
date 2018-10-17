@@ -7,6 +7,13 @@
         </a>
       </li>
 
+      <li :class="setActive('students')">
+        <a href="{{ route('school-students.index') }}">
+          <i class="ti-server"></i>
+          <p>Data Siswa</p>
+        </a>
+      </li>
+
       <li :class="setActive('ists')">
         <a href="{{ route('school-ists.index') }}">
           <i class="ti-book"></i>
